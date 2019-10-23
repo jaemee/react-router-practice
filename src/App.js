@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CounterGroupPage from './components/CounterGroup/CounterGroup'
+import Todos from './components/Todo/Todo'
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +22,9 @@ function App() {
         <li>
           <Link to="/counterGroup">Counter Group</Link>
         </li>
+        <li>
+          <Link to="/todoList">Todo List</Link>
+        </li>
       </ul>
 
       <hr />
@@ -38,6 +42,9 @@ function App() {
         </Route>
         <Route path="/counterGroup">
           <CounterGroup />
+        </Route>
+        <Route path="/todoList">
+          <TodoList />
         </Route>
       </Switch>
     </div>
@@ -76,6 +83,15 @@ function CounterGroup() {
     <div>
       <h2>Counter Group</h2>
       <CounterGroupPage />
+    </div>
+  );
+}
+
+function TodoList() {
+  return (
+    <div>
+      <h2>Todo List</h2>
+      <Todos />
     </div>
   );
 }
