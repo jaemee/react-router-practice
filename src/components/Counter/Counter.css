@@ -1,0 +1,14 @@
+.counter {
+    text-align: center;
+    background: #282c34;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+  }
+
+.counter span {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}

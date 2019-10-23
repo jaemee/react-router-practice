@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CounterGroupPage from './components/CounterGroup/CounterGroup'
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,10 +19,7 @@ function App() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/counterGroup">Counter Group</Link>
         </li>
       </ul>
 
@@ -38,11 +36,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/dashboard">
-          <Dashboard />
+        <Route path="/counterGroup">
+          <CounterGroup />
         </Route>
       </Switch>
     </div>
@@ -76,18 +71,11 @@ function Home() {
   );
 }
 
-function About() {
+function CounterGroup() {
   return (
     <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
+      <h2>Counter Group</h2>
+      <CounterGroupPage />
     </div>
   );
 }
